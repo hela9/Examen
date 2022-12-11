@@ -1,0 +1,47 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un Developpeur :</h2>
+    </div>
+    
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Developpeur</label>
+        <input type="text" [(ngModel)]="newDeveloppeur.idDeveloppeur"
+        name="idDeveloppeur" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Nom Developpeur</label>
+            <input type="text"[(ngModel)]= "newDeveloppeur.nomDeveloppeur"
+            name="nomDeveloppeur" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Email Developpeur</label>
+            <input type="text" [(ngModel)]= "newDeveloppeur.mailDeveloppeur"
+            name="mailDeveloppeur" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label >Telephone Developpeur</label>
+            <input type="text" [(ngModel)]= "newDeveloppeur.telDeveloppeur"
+            name="telDeveloppeur" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Salaire Developpeur</label>
+            <input type="number" [(ngModel)]= "newDeveloppeur.salaireDeveloppeur"
+            name="salaireDeveloppeur" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>Langage</label>
+        <select class="form-control form-control-lg" id="idLangage" name="idLangage"
+        [(ngModel)]="newIdLangage">
+        <option *ngFor="let lang of langages" [value]="lang.idLangage" >
+            {{lang.nomLangage}}
+        </option>
+           
+        </select>
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="addDeveloppeur()"class="btn btn-success">Ajouter</button>
+        </div>
+
+    </form>
+</div>

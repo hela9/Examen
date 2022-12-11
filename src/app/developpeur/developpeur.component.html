@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Liste de Developpeurs</th>
+            </tr>
+            <tr> 
+                <th>Id</th><th>Nom</th> <th>Email</th> <th>Telephone</th><th>Salaire</th><th>Langage</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let developpeur of developpeurs">
+            <tr >
+                <td>{{developpeur.idDeveloppeur}}</td>
+                <td>{{developpeur.nomDeveloppeur}}</td>
+                <td>{{developpeur.mailDeveloppeur}}</td>
+                <td>{{developpeur.telDeveloppeur}}</td>
+                <td>{{developpeur.salaireDeveloppeur}}</td>
+                <td>{{developpeur.langage.nomLangage}}</td>
+
+                <td><a class="btn btn-danger" (click)="supprimerDeveloppeur(developpeur)">Supprimer</a></td>
+                <td><a class="btn btn-success" [routerLink]="['/updateDeveloppeur',developpeur.idDeveloppeur]">Modifier</a></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+</div>

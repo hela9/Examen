@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+            <app-update-langage [langage]="updatedLang"(langageUpdated)= "langageUpdated($event)" [ajout]="ajout"></app-update-langage>
+        </div>
+            
+    <table class="table table-striped">
+    <thead>
+    <tr> <th>Id</th><th>Nom Langage</th> </tr>
+    </thead>
+    <tbody *ngFor="let lang of langages">
+    <tr>
+    <td>{{lang.idLangage}}</td>
+    <td>{{lang.nomLangage}}</td>
+    <td><a class="btn btn-success" (click)="updateLang(lang)">Editer</a></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>

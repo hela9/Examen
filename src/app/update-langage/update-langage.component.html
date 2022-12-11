@@ -1,0 +1,18 @@
+<form>
+    <div [hidden]="ajout" >
+    <label >ID Langage</label>
+    <input type="text" [(ngModel)]="langage.idLangage" name="idLangage" class="form-control w-25">
+    </div>
+    <div>
+    <label>Nom Langage</label>
+    <input type="text" [(ngModel)]="langage.nomLangage" name="nomLangage" class="form-control"
+    placeholder="Entrez un nom de langage...">
+    </div>
+    <div class="mt-2">
+        <button type="submit" [disabled]="!langage.nomLangage" class="btn btn-success"
+        (click)="saveLangage()" >{{ajout ? 'Ajouter' : 'Modifier'}}
+        </button>
+        
+    </div>
+    </form>
+    
